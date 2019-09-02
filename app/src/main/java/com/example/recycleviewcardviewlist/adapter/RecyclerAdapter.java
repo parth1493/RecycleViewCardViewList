@@ -53,15 +53,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 	public void removeItem(int position) {
 		mDataList.remove(position);
 		notifyItemRemoved(position);
-//		notifyItemRangeChanged(position, mDataList.size());
-//		notifyDataSetChanged();
+		notifyItemRangeChanged(position, mDataList.size());
+		//notifyDataSetChanged();
 	}
 
 	public void addItem(int position, Landscape landscape) {
 		mDataList.add(position, landscape);
 		notifyItemInserted(position);
-//		notifyItemRangeChanged(position, mDataList.size());
-//		notifyDataSetChanged();
+		notifyItemRangeChanged(position, mDataList.size());
+		//notifyDataSetChanged();
 	}
 
 	class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
